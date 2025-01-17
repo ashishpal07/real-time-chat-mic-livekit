@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real-Time Chat with Audio</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+  <script defer src="https://cdn.livekit.io/livekit-client-sdk-1.0.0.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <h1>Real-Time Chat with Audio</h1>
+  <div id="chat">
+    <div id="messages"></div>
+    <input type="text" id="messageInput" placeholder="Type a message..." />
+    <button id="sendMessage">Send</button>
+  </div>
+  <div id="audioControls">
+    <button id="toggleMic">Toggle Mic</button>
+  </div>
+</body>
+</html>
