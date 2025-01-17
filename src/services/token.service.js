@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const generateToken = (identity, roomName) => {
+const generateToken = async (identity, roomName) => {  
   const at = new AccessToken(process.env.LIVEKIT_API_KEY, process.env.LIVEKIT_API_SECRET, {
     identity,
   });
@@ -14,7 +14,9 @@ const generateToken = (identity, roomName) => {
     canSubscribe: true,
   });
 
-  return at.toJwt();
+  const token = await at.toJwt();
+  
+  return token;
 };
 
 export { generateToken };
